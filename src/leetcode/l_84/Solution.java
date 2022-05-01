@@ -4,10 +4,10 @@ import java.util.Stack;
 
 class Solution {
     final static int N = 100010;
-    int[] l = new int[N];
-    int[] r = new int[N];
-    Stack<Integer> s = new Stack<>();
     public int largestRectangleArea(int[] heights) {
+        int[] l = new int[N];
+        int[] r = new int[N];
+        Stack<Integer> s = new Stack<>();
         for(int i = 0; i < heights.length; i ++){
             while(s.size() > 0 && heights[i] <= heights[s.peek()]) s.pop();
             if(s.empty()) l[i] = -1;
