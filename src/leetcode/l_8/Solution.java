@@ -1,3 +1,5 @@
+package leetcode.l_8;
+
 class Solution {
     public int myAtoi(String s) {
         int i = 0;
@@ -18,11 +20,11 @@ class Solution {
         while (i < n && Character.isDigit(s.charAt(i))) {
             res = res * 10 + s.charAt(i) - '0';
             i++;
-            if(res > Integer.MAX_VALUE || res < Integer.MIN_VALUE) {
+            if (res > Integer.MAX_VALUE || res < Integer.MIN_VALUE) {
                 break;
             }
         }
-        if(flag) res = -res;
+        if (flag) res = -res;
         if (res < Integer.MIN_VALUE) return Integer.MIN_VALUE;
         if (res > Integer.MAX_VALUE) return Integer.MAX_VALUE;
         return (int) res;

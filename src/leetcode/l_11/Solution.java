@@ -1,11 +1,16 @@
 package leetcode.l_11;
 
 class Solution {
-    final static int N = 100010;
-    static int[] l = new int[N];
-    static int[] r = new int[N];
-
     public int maxArea(int[] height) {
-
+        int n = height.length;
+        int i = 0, j = n - 1;
+        int res = 0;
+        while(i <= j) {
+            System.out.println(height[i] + " " + height[j] + " " + (j - i));
+            res = Math.max(res, Math.min(height[i], height[j]) * (j - i));
+            if(height[i] < height[j]) i ++;
+            else j --;
+        }
+        return res;
     }
 }
