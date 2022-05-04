@@ -4,7 +4,9 @@ package leetcode.l_27;
  * Time: 2022/5/5
  * Author: HuHong
  * Desc: 移除元素
+ * KMP
  ***********************************************************/
+
 class Solution {
     public int removeElement(int[] nums, int val) {
         int j = 0;
