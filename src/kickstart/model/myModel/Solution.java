@@ -9,6 +9,14 @@ public class Solution {
 
     }
 
+
+
+    void swap(int[] q, int i, int j) {
+        int temp = q[i];
+        q[i] = q[j];
+        q[j] = temp;
+    }
+
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
