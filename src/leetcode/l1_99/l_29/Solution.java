@@ -1,17 +1,14 @@
-package leetcode.l1_99.l_95;
-
-import leetcode.l1_99.l_94.TreeNode;
-
-import java.util.List;
+package leetcode.l1_99.l_29;
 
 /***********************************************************                                          *
  * Time: 2022/5/11
  * Author: HuHong
- * Desc: 不同的二叉搜索树 II
+ * Desc: 两数相除
  * review
  ***********************************************************/
+// todo
 class Solution {
-    public List<TreeNode> generateTrees(int n) {
-        return null;
+    public int divide(int dividend, int divisor) {
+        return 0;
     }
 }

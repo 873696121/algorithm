@@ -1,17 +1,15 @@
-package leetcode.l1_99.l_95;
-
-import leetcode.l1_99.l_94.TreeNode;
-
-import java.util.List;
+package leetcode.l1_99.l_28;
 
 /***********************************************************                                          *
  * Time: 2022/5/11
  * Author: HuHong
- * Desc: 不同的二叉搜索树 II
+ * Desc: 实现 strStr()
  * review
  ***********************************************************/
+// KMP
+// todo
 class Solution {
-    public List<TreeNode> generateTrees(int n) {
-        return null;
+    public int strStr(String haystack, String needle) {
+        return 0;
     }
 }
