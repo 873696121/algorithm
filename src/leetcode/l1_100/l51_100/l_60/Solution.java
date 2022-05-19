@@ -1,9 +1,5 @@
 package leetcode.l1_100.l51_100.l_60;
 
-import javafx.print.Collation;
-
-import java.util.Arrays;
-
 /***********************************************************                                          *
  * Time: 2022/5/19
  * Author: HuHong
@@ -11,34 +7,22 @@ import java.util.Arrays;
  ***********************************************************/
 class Solution {
     public String getPermutation(int n, int k) {
-        int[] f = new int[n];
-        for(int i = 0; i < n; i ++)
-            f[i] = i + 1;
-        while(k -- > 1)
-            nextPermutation(f);
-        StringBuffer sb = new StringBuffer();
-        for(int i = 0; i < n; i ++)
-            sb.append(f[i]);
-        return sb.toString();
-    }
-
-    public void nextPermutation(int[] nums) {
-        int n = nums.length;
-        int i = n - 2;
-        while (i >= 0 && nums[i] >= nums[i + 1]) i--;
-        if (i < 0) {
-            Arrays.sort(nums);
-            return;
+        StringBuilder res = new StringBuilder();
+        boolean[] st = new boolean[n + 1];
+        for(int i = 1; i <= n; i ++){
+            int fact = 1;
+            for(int j = n - i; j >= 1; j --) fact *= j;
+            for(int j = 1; j <= n; j ++){
+                if(!st[j]) {
+                    if(k > fact) k-= fact;
+                    else {
+                        res.append(j);
+                        st[j] = true;
+                        break;
+                    }
+                }
+            }
         }
-        int j = n - 1;
-        while (nums[j] <= nums[i]) j--;
-        swap(nums, i, j);
-        Arrays.sort(nums, i + 1, n);
-    }
-
-    void swap(int[] q, int l, int r) {
-        int temp = q[l];
-        q[l] = q[r];
-        q[r] = temp;
+        return res.toString();
     }
 }
