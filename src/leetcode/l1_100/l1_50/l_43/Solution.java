@@ -1,8 +1,5 @@
 package leetcode.l1_100.l1_50.l_43;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /***********************************************************                                          *
  * Time: 2022/5/18
  * Author: HuHong

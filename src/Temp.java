@@ -1,4 +1,6 @@
 import java.util.BitSet;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /***********************************************************                                          *
  * Time: 2022/5/10
@@ -7,7 +9,7 @@ import java.util.BitSet;
  ***********************************************************/
 public class Temp {
     public static void main(String[] args) {
-        BitSet bitSet = new BitSet();
-        System.out.println(bitSet.get(33333));
+        Queue<Integer> q = new LinkedList<>();
+        System.out.println(q.toArray());
     }
 }

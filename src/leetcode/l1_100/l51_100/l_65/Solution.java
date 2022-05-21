@@ -1,11 +1,10 @@
 package leetcode.l1_100.l51_100.l_65;
 
-import java.util.Arrays;
-
 /***********************************************************                                          *
  * Time: 2022/5/19
  * Author: HuHong
  * Desc: 有效数字
+ * review
  ***********************************************************/
 class Solution {
     int pos = 0;

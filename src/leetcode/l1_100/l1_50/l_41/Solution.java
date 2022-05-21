@@ -1,7 +1,5 @@
 package leetcode.l1_100.l1_50.l_41;
 
-import java.util.Arrays;
-
 /***********************************************************                                          *
  * Time: 2022/5/18
  * Author: HuHong
