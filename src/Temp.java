@@ -8,8 +8,21 @@ import java.util.Queue;
  * Desc:
  ***********************************************************/
 public class Temp {
+    static long quickPow(long a, long b, long p) {
+        long res = 1;
+        while(b > 0) {
+            if((b & 1) != 0) res = (res * a) % p;
+            a *= a;
+            a %= p;
+            b >>= 1;
+        }
+        return res;
+    }
+
     public static void main(String[] args) {
-        Queue<Integer> q = new LinkedList<>();
-        System.out.println(q.toArray());
+        String s = "aba";
+        int i = 2;
+        String t = s.substring(0, i) + s.substring(i + 1);
+        System.out.println(t);
     }
 }
