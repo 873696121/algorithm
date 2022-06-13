@@ -9,6 +9,9 @@ package extra;/*
  * If you need more classes, simply define them inline.
  */
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 反转偶数位置的链表
  * 终点看merge和split的过程
@@ -29,12 +32,7 @@ class Solution {
     Node head;
 
     Solution() {
-        head = new Node(1);
-        Node cur = head;
-        for (int i = 2; i <= 5; i++) {
-            cur.next = new Node(i);
-            cur = cur.next;
-        }
+        head = build();
     }
 
     Node reverse(Node h) {
@@ -97,9 +95,29 @@ class Solution {
         System.out.println();
     }
 
+    Node build(){
+        Node h = new Node(1);
+        Node cur = h;
+        for (int i = 2; i <= 5; i++) {
+            cur.next = new Node(i);
+            cur = cur.next;
+        }
+        return h;
+    }
+
     public static void main(String[] args) {
         Solution s = new Solution();
-        s.reverseList();
-        s.print();
+//        s.reverseList();
+//        s.print();
+//        Node a = s.build();
+//        Node b = s.build();
+        Map<Integer, Integer> cnt = new HashMap<>();
+        cnt.put(1, 2);
+        cnt.put(2, 2);
+        cnt.put(3, 2);
+        cnt.put(4, 2);
+        for (Integer integer : cnt.keySet()) {
+            System.out.println(integer + " " + cnt.get(integer));
+        }
     }
 }
